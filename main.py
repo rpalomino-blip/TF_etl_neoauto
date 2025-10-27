@@ -8,7 +8,9 @@ from tasks.load import load
 def main():
     data = extract()
     data_transform = transform(data)
-    load(data_transform)
+    print(f'transformados {len(data_transform)} registros')
+    resultado = load(data_transform)
+    print(f'se insertaron {resultado} registros en la bd')
     
 if __name__ == "__main__":
     main()
